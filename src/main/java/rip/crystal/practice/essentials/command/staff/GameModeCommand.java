@@ -32,10 +32,6 @@ public class GameModeCommand extends BaseCommand {
 		String[] args = commandArgs.getArgs();
 		Profile profile = Profile.get(player.getUniqueId());
 
-		if (profile.getState() == ProfileState.FIGHTING || profile.getState() == ProfileState.FFA) {
-			player.sendMessage(CC.translate("&9You cannot execute this command while fighting."));
-			return;
-		}
 
 		if (args.length == 0) {
 			player.sendMessage(CC.RED + "Please insert GameMode.");

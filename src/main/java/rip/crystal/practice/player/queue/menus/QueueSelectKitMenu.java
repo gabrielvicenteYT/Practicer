@@ -79,7 +79,7 @@ public class QueueSelectKitMenu extends Menu {
 							.replace("{elo}", String.valueOf(profile.getKitData().get(queue.getKit()).getElo()))
 							.replace("{in-queue}", String.valueOf(queue.getPlayers().size()))));
 
-			ChatColor color = ChatColor.valueOf(config.getString("QUEUE." + (queue.isRanked() ? "RANKED" : "UNRANKED") + ".NAME_COLOR"));
+			ChatColor color = ChatColor.valueOf(config.getString("QUEUE." + (queue.isRanked() ? "RANKED" : "UNRANKED") + "&l" + ".NAME_COLOR"));
 			boolean amount = config.getBoolean("QUEUE.AMOUNT_PER_FIGHTS");
 
 			return new ItemBuilder(queue.getKit().getDisplayIcon())
